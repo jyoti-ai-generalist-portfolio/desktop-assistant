@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Desktop Assistant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Desktop Assistant</h1>
+      <span class="model-tag">{{ model_name }}</span>
+      <button id="reset-btn" title="Clear conversation">Reset</button>
+    </header>
+
+    <main id="chat-window"></main>
+
+    <footer>
+      <textarea id="input-box" placeholder="Ask me anything… (Enter to send, Shift+Enter for newline)" rows="1"></textarea>
+      <button id="send-btn">Send</button>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
