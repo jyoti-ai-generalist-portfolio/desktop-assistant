@@ -17,7 +17,8 @@ app = Flask(__name__)
 
 # ---- Configuration -----------------------------------------------------
 OLLAMA_URL = "http://localhost:11434/api/chat"
-MODEL_NAME = "gemma4:e2b"      # swap for phi4-mini / llama3.2:3b / qwen3.5:4b etc.
+#MODEL_NAME = "gemma4:e2b"      # swap for phi4-mini / llama3.2:3b / qwen3.5:4b etc.
+MODEL_NAME = "qwen2.5-coder:3b"
 MAX_CONTEXT_TOKENS = 2048       # keep small — this is what matters most on 8GB RAM
 MAX_HISTORY_MESSAGES = 12       # trim old turns so requests stay cheap
 KEEP_ALIVE = "5m"               # unload the model from RAM after 5 min idle
